@@ -15,11 +15,12 @@
  * No other dependencies; uses the global `fetch` (browsers and Node 18+).
  */
 
+
 const DEFAULT_BASE_URL = "https://backpack-trailside-unraveled.ngrok-free.dev";
 const SOCKET_IO_CDN_URL = "https://cdn.jsdelivr.net/npm/socket.io-client@4.8.4/dist/socket.io.esm.min.js";
 
 // Error thrown for every failed call. `code` is the backend status code.
-export class OncePayError extends Error {
+class OncePayError extends Error {
     constructor(message, code = 500, response = null) {
         super(message);
         this.name = "OncePayError";
@@ -157,5 +158,3 @@ class OncePay {
         return payload;
     }
 }
-
-export default OncePay;
