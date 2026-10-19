@@ -1,0 +1,14 @@
+{
+  "name": "once-pay-lib",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared client SDKs for Once-Pay",
+  "scripts": {
+    "minify": "terser vanila-js/index.js --compress --mangle --banner \"/* Once-Pay Vanilla JS SDK (minified) — source: vanila-js/index.js */\" -o vanila-js/index.min.js",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "terser": "^5.51.2"
+  }
+}

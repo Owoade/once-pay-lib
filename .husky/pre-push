@@ -1,0 +1,21 @@
+# Final gate before anything leaves this repo: the minified build must match
+# the source being pushed. (A commit made *inside* a pre-push hook is NOT
+# included in the same push — verified empirically — so the real build runs
+# in pre-commit; this only guards pushes of commits that skipped it.)
+
+npm run minify --silent
+
+# Nothing committed yet — a push would have nothing to send anyway.
+if ! git rev-parse -q --verify HEAD >/dev/null 2>&1; then
+  exit 0
+fi
+
+# Rebuilt artifact is identical to the one in HEAD → fresh.
+if git diff --quiet HEAD -- vanila-js/index.min.js; then
+  exit 0
+fi
+
+git add vanila-js/index.min.js
+echo "✗ Push blocked: vanila-js/index.min.js was stale." >&2
+echo "  It has been regenerated and staged — commit it, then push again." >&2
+exit 1
