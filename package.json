@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
+    "socket.io-client": "^4.8.4",
     "terser": "^5.51.2"
   }
 }

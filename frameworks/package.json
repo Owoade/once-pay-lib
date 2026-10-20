@@ -1,0 +1,41 @@
+{
+  "name": "once-pay-sdk",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Framework-agnostic Once-Pay payment SDK — works in React, Vue, Svelte, Next.js and plain ESM.",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "once-pay",
+    "payments",
+    "paystack",
+    "flutterwave",
+    "korapay",
+    "monnify",
+    "seerbit",
+    "nigeria"
+  ],
+  "peerDependencies": {
+    "socket.io-client": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "socket.io-client": {
+      "optional": true
+    }
+  },
+  "license": "MIT"
+}

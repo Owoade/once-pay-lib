@@ -16,7 +16,7 @@
  */
 
 
-const DEFAULT_BASE_URL = "https://backpack-trailside-unraveled.ngrok-free.dev";
+const DEFAULT_BASE_URL = "https://oncepay-api.owoade.dev";
 const SOCKET_IO_CDN_URL = "https://cdn.jsdelivr.net/npm/socket.io-client@4.8.4/dist/socket.io.esm.min.js";
 
 // Error thrown for every failed call. `code` is the backend status code.
